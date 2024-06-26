@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <!-- Action Car-->
+    <record id="model_car_action" model="ir.actions.act_window">
+        <field name="name">Voitures</field>
+        <field name="res_model">car_management.car</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="car_action_view_tree" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.car</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="manufacturer"/>
+                <field name="car_model"/>
+                <field name="fuel_type"/>
+                <field name="numbers_of_places"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Action Travel-->
+    <record id="model_travel_action" model="ir.actions.act_window">
+        <field name="name">Voyages</field>
+        <field name="res_model">car_management.travel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="travel_action_view_tree" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.travel</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="car_id"/>
+                <field name="departure_location"/>
+                <field name="destination"/>
+                <field name="travel_time"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Action Ticket-->
+    <record id="model_ticket_action" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">car_management.ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="ticket_action_view_tree" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.ticket</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="contact_id"/>
+                <field name="destionation"/>
+                <field name="car_id"/>
+                <field name="date_departure"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

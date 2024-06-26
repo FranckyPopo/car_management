@@ -101,10 +101,7 @@
                         </div>
                     </t>
                 </templates>
-
             </kanban>
         </field>
     </record>
-
-
 </odoo>

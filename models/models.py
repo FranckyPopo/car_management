@@ -36,6 +36,7 @@ class Car(models.Model):
     numbers_of_places = fields.Selection(
         string="Nombre de place",
         required=True,
+        default="4",
         selection=[
             ("1", "1"),
             ("2", "2"),
@@ -50,6 +51,7 @@ class Car(models.Model):
     fuel_type = fields.Selection(
         string="Type de carburant",
         required=True,
+        default="essence",
         selection=[
             ("essence", "Essence"),
             ("diesel", "Diesel"),
@@ -66,6 +68,10 @@ class Car(models.Model):
         string="Chauffeur"
     )
 
+    def _compute_display_name(self):
+        for order in self:
+            order.display_name = f"{order.manufacturer}({order.car_model})".title()
+
 
 class Travel(models.Model):
     _name = "car_management.travel"
@@ -74,12 +80,13 @@ class Travel(models.Model):
     car_id = fields.Many2one(
         "car_management.car",
         string="Voiture",
+
     )
     departure_location = fields.Char(string="Lieu départ")
     destination = fields.Char(string="Destination")
     date_departure = fields.Datetime(string="Date de départ", default=fields.Datetime.now())
     date_arrival = fields.Datetime(string="Date d'arrivée", default=fields.Datetime.now())
-    travel_time = fields.Integer(string="Travel time", inverse="_inverse_travel_time")
+    travel_time = fields.Integer(string="Durée du voyage", inverse="_inverse_travel_time", default=1)
     numbers_of_places = fields.Integer(string="Nombre de place", readonly=True)
 
     def _inverse_travel_time(self):
@@ -89,6 +96,10 @@ class Travel(models.Model):
     @api.onchange("car_id")
     def _onchange_car_id(self):
         self.numbers_of_places = self.car_id.numbers_of_places
+
+    def _compute_display_name(self):
+        for order in self:
+            order.display_name = f"{order.car_id.car_model}"
 
 
 class Ticket(models.Model):
@@ -118,4 +129,6 @@ class Ticket(models.Model):
         default=fields.Datetime.now(),
     )
 
-
+    def _compute_display_name(self):
+        for order in self:
+            order.display_name = f"{order.contact_id.name}({order.car_id.car_model})"

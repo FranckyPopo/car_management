@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-<!--
+
      <record id="car_action_view_form" model="ir.ui.view">
         <field name="name">Car Tree</field>
         <field name="model">car_management.car</field>
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
-                    <h1>Hello word !</h1>
                 </header>
                 <sheet>
                     <group>
                         <group>
-                            <field name="car_model"/>
-                            <field name="manufacturer"/>
+                            <field name="car_model" placeholder="e.g. Corolla"/>
+                            <field name="manufacturer" placeholder="e.g. Toyota"/>
                         </group>
                         <group>
-                            <field name="numbers_of_places"/>
-                            <field name="fuel_type"/>
+                            <field name="numbers_of_places" placeholder="e.g. 2"/>
+                            <field name="fuel_type" placeholder="e.g. Essence"/>
                         </group>
                         <group>
-                            <field name="employe_id"/>
+                            <field name="employe_id" placeholder="e.g. Kreto Ariel"/>
                         </group>
                     </group>
 
@@ -31,23 +30,25 @@
     </record>
 
      <record id="travel_action_view_form" model="ir.ui.view">
-        <field name="name">Travel Tree</field>
+        <field name="name">Travel Form</field>
         <field name="model">car_management.travel</field>
         <field name="arch" type="xml">
             <form string="Test Form Car">
-
                 <sheet>
                     <group>
                         <group>
-                            <field name="departure_location"/>
-                            <field name="destination"/>
+                            <field name="departure_location" placeholder="e.g. Abidjan"/>
+                            <field name="destination" placeholder="e.g. Paris"/>
                         </group>
                         <group>
                             <field name="date_departure"/>
                             <field name="date_arrival"/>
+                            <field name="car_id"/>
                         </group>
                         <group>
-                            <field name="travel_time" help="Le Nombre saisi sera multiplié par 2"/>
+                            <field name="travel_time"
+                                   help="Le Nombre saisi sera multiplié par. Le temps d'arrivée s'exprime en jour"
+                                    placeholder="e.g. 2"/>
                         </group>
                     </group>
 
@@ -56,7 +57,31 @@
             </form>
         </field>
     </record>
--->
+
+    <record id="ticket_action_view_form" model="ir.ui.view">
+        <field name="name">Travel Form</field>
+        <field name="model">car_management.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Test Form Car">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="contact_id" placeholder="e.g. Afri Kreto"/>
+                            <field name="destionation" placeholder="Abidjan"/>
+                            <field name="amount" placeholder="e.g. 15500.00 FCFA"/>
+                        </group>
+                        <group>
+                            <field name="car_id" placeholder="Mercedes-Benz GLE"/>
+                            <field name="date"/>
+                            <field name="date_departure"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
 </odoo>
 
 

@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-     <record id="ticket_action_view_form" model="ir.ui.view">
+<!--
+     <record id="car_action_view_form" model="ir.ui.view">
         <field name="name">Car Tree</field>
         <field name="model">car_management.car</field>
         <field name="arch" type="xml">
             <form string="Test Form Car">
+                <header>
+                    <h1>Hello word !</h1>
+                </header>
                 <sheet>
-                    <field name="car_model"></field>
-                    <field name="car_model"></field>
-                    <field name="car_model"></field>
-                    <field name="car_model"></field>
+                    <group>
+                        <group>
+                            <field name="car_model"/>
+                            <field name="manufacturer"/>
+                        </group>
+                        <group>
+                            <field name="numbers_of_places"/>
+                            <field name="fuel_type"/>
+                        </group>
+                        <group>
+                            <field name="employe_id"/>
+                        </group>
+                    </group>
+
                 </sheet>
             </form>
         </field>
     </record>
 
+     <record id="travel_action_view_form" model="ir.ui.view">
+        <field name="name">Travel Tree</field>
+        <field name="model">car_management.travel</field>
+        <field name="arch" type="xml">
+            <form string="Test Form Car">
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="departure_location"/>
+                            <field name="destination"/>
+                        </group>
+                        <group>
+                            <field name="date_departure"/>
+                            <field name="date_arrival"/>
+                        </group>
+                        <group>
+                            <field name="travel_time" help="Le Nombre saisi sera multiplié par 2"/>
+                        </group>
+                    </group>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+-->
 </odoo>
 
 

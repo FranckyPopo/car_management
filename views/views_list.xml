@@ -3,9 +3,9 @@
 <odoo>
     <!-- Action Car-->
     <record id="model_car_action" model="ir.actions.act_window">
-        <field name="name">Voitures</field>
+        <field name="name">Liste des voitures</field>
         <field name="res_model">car_management.car</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <record id="car_action_view_tree" model="ir.ui.view">
@@ -24,9 +24,9 @@
 
     <!-- Action Travel-->
     <record id="model_travel_action" model="ir.actions.act_window">
-        <field name="name">Voyages</field>
+        <field name="name">Liste des voyages</field>
         <field name="res_model">car_management.travel</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <record id="travel_action_view_tree" model="ir.ui.view">
@@ -45,9 +45,9 @@
 
     <!-- Action Ticket-->
     <record id="model_ticket_action" model="ir.actions.act_window">
-        <field name="name">Tickets</field>
+        <field name="name">Liste des tickets</field>
         <field name="res_model">car_management.ticket</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <record id="ticket_action_view_tree" model="ir.ui.view">

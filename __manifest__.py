@@ -28,6 +28,7 @@
         'views/views_list.xml',
         'views/views_forms.xml',
         'views/views_menu.xml',
+        'views/views_kanban.xml',
 
     ],
     # only loaded in demonstration mode

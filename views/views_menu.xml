@@ -3,11 +3,9 @@
 <odoo>
 
     <menuitem id="menu_car_management_root" name="Car Management">
-        <menuitem id="menu_first_level" name="Menu génerale">
-            <menuitem id="menu_action1" action="model_car_action"/>
-            <menuitem id="menu_action2" action="model_travel_action"/>
-            <menuitem id="menu_action3" action="model_ticket_action"/>
-        </menuitem>
+        <menuitem id="menu_action1" action="model_car_action"/>
+        <menuitem id="menu_action2" action="model_travel_action"/>
+        <menuitem id="menu_action3" action="model_ticket_action"/>
     </menuitem>
 
 </odoo>

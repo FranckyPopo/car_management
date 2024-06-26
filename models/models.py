@@ -33,7 +33,7 @@ class Car(models.Model):
         ],
         required=True,
     )
-    number_of_places = fields.Selection(
+    numbers_of_places = fields.Selection(
         string="Nombre de place",
         required=True,
         selection=[
@@ -89,3 +89,25 @@ class Travel(models.Model):
     @api.onchange("car_id")
     def _onchange_car_id(self):
         self.numbers_of_places = self.car_id.numbers_of_places
+
+
+class Ticket(models.Model):
+    _name = 'car_management.ticket'
+    _description = "Representation d'un Ticket"
+
+    contact_id = fields.Many2one(
+        "contacts",
+        string="Nom du client",
+        required=True,
+    )
+    amount = fields.Float(string="Monatant", required=True)
+    destionation = fields.Char(string="Destination", required=True)
+    car_id = fields.Many2one(
+        "car_management.car",
+        string="Voiture",
+        required=True,
+    )
+    date_departure = fields.Datetime(required=True)
+    date = fields.Datetime(required=True)
+
+

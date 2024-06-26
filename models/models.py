@@ -77,10 +77,10 @@ class Travel(models.Model):
     )
     departure_location = fields.Char(string="Lieu départ")
     destination = fields.Char(string="Destination")
-    date_departure = fields.Datetime(string="Date de départ")
-    date_arrival = fields.Datetime(string="Date d'arrivée")
+    date_departure = fields.Datetime(string="Date de départ", default=fields.Datetime.now())
+    date_arrival = fields.Datetime(string="Date d'arrivée", default=fields.Datetime.now())
     travel_time = fields.Integer(string="Travel time", inverse="_inverse_travel_time")
-    numbers_of_places = fields.Integer(string="Nombre de place")
+    numbers_of_places = fields.Integer(string="Nombre de place", readonly=True)
 
     def _inverse_travel_time(self):
         for record in self:
@@ -96,18 +96,26 @@ class Ticket(models.Model):
     _description = "Representation d'un Ticket"
 
     contact_id = fields.Many2one(
-        "contacts",
+        "res.partner",
         string="Nom du client",
         required=True,
     )
-    amount = fields.Float(string="Monatant", required=True)
+    amount = fields.Float(string="Montant", required=True)
     destionation = fields.Char(string="Destination", required=True)
     car_id = fields.Many2one(
         "car_management.car",
         string="Voiture",
         required=True,
     )
-    date_departure = fields.Datetime(required=True)
-    date = fields.Datetime(required=True)
+    date_departure = fields.Datetime(
+        required=True,
+        string="Date de départ",
+        default=fields.Datetime.now(),
+    )
+    date = fields.Datetime(
+        required=True,
+        string="Date",
+        default=fields.Datetime.now(),
+    )
 
 

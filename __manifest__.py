@@ -29,6 +29,7 @@
         'views/views_forms.xml',
         'views/views_menu.xml',
         'views/views_kanban.xml',
+        'wizard/widzard.xml',
 
     ],
     # only loaded in demonstration mode

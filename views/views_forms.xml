@@ -9,7 +9,11 @@
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
-                   <button name="action_test" type="object" string="détail chauffeur"/>
+                   <button name="driver_details" type="object" string="Détail chauffeur"/>
+                   <button name="%(action_employee_id_car_wizard)d"
+                           type="action"
+                           string="Changer chauffeur"
+                           context="{'employee_id':active_id}"/>
                 </header>
                 <sheet>
                     <group>

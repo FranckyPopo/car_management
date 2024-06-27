@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_car_management,Car,model_car_management_car,base.group_user,1,1,1,1
 access_travel_management,Travel,model_car_management_travel,base.group_user,1,1,1,1
 access_ticket_management,Ticket,model_car_management_ticket,base.group_user,1,1,1,1
+access_car_management_wizard_employee_id,Wizard employee id,model_car_management_wizard,base.group_user,1,1,1,1

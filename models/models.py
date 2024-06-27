@@ -72,7 +72,7 @@ class Car(models.Model):
         for order in self:
             order.display_name = f"{order.manufacturer}({order.car_model})".title()
 
-    def action_test(self):
+    def driver_details(self):
 
         return {
             "type": "ir.actions.act_window",
@@ -81,6 +81,8 @@ class Car(models.Model):
             "res_id": self.employe_id.id,
             "target": "new",
         }
+
+
 
 class Travel(models.Model):
     _name = "car_management.travel"

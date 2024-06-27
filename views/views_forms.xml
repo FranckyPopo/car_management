@@ -44,12 +44,12 @@
                         <group>
                             <field name="departure_location" placeholder="e.g. Abidjan"/>
                             <field name="destination" placeholder="e.g. Paris"/>
-                            <field name="numbers_of_places"/>
+                            <field name="car_id"/>
                         </group>
                         <group>
                             <field name="date_departure"/>
                             <field name="date_arrival"/>
-                            <field name="car_id"/>
+                            <field name="numbers_of_places"/>
                         </group>
                         <group>
                             <field name="travel_time"

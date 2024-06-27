@@ -11,5 +11,9 @@ class Wizard(models.TransientModel):
     )
 
     def valid(self):
-        print("--------------------- button click")
-        pass
+        Car = self.env["car_management.car"]
+        instance_car = Car.browse(self.env.context.get('active_id'))
+        instance_car.employe_id = self.employe_id
+        return True
+
+

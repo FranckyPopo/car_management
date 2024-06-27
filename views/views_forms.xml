@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
-                   <button name="action_test" type="object" string="Infos chauffeur"/>
+                   <button name="action_test" type="object" string="détail chauffeur"/>
                 </header>
                 <sheet>
                     <group>
@@ -82,8 +82,6 @@
             </form>
         </field>
     </record>
-
-
 </odoo>
 
 

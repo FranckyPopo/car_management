@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from pprint import pprint
 
 
 class Car(models.Model):
@@ -74,7 +73,6 @@ class Car(models.Model):
             order.display_name = f"{order.manufacturer}({order.car_model})".title()
 
     def action_test(self):
-        print("employ -----------------------------------------------------")
 
         return {
             "type": "ir.actions.act_window",
@@ -91,7 +89,6 @@ class Travel(models.Model):
     car_id = fields.Many2one(
         "car_management.car",
         string="Voiture",
-
     )
     departure_location = fields.Char(string="Lieu départ")
     destination = fields.Char(string="Destination")

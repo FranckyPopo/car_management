@@ -21,29 +21,6 @@
         </field>
     </record>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Action Travel-->
     <record id="model_travel_action" model="ir.actions.act_window">
         <field name="name">Liste des voyages</field>
@@ -63,8 +40,6 @@
             </tree>
         </field>
     </record>
-
-
 
     <!-- Action Ticket-->
     <record id="model_ticket_action" model="ir.actions.act_window">

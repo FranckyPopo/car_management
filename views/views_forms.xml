@@ -10,9 +10,8 @@
             <form string="Test Form Car">
                 <header>
                    <button name="driver_details" type="object" string="Détail chauffeur"/>
-                   <button name="%(action_employee_id_car_wizard)d"
-                           type="action"
-                           string="Changer chauffeur"
+                   <button string="Changer chauffeur" type="action"
+                           name="%(franck)d"
                            context="{'employee_id':active_id}"/>
                 </header>
                 <sheet>

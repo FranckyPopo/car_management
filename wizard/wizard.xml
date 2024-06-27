@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+     <record id="employee_id_view_formm_wizard" model="ir.ui.view">
+        <field name="name">Modifier le chauffeur</field>
+        <field name="model">car_management.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Test Form Car">
+                <sheet>
+                    <group>
+                        <field name="employe_id"/>
+                    </group>
+                    <footer>
+                        <button type="object" name="valid" string="Comfirmer le changement de chauffeur"></button>
+                        <button string="Annuler" speciale="cancel"></button>
+                     </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="franck" model="ir.actions.act_window">
+        <field name="name">Changer de chauffeurs</field>
+        <field name="res_model">car_management.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

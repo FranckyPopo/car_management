@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from pprint import pprint
 
 
 class Car(models.Model):
@@ -73,13 +74,13 @@ class Car(models.Model):
             order.display_name = f"{order.manufacturer}({order.car_model})".title()
 
     def action_test(self):
-        print("-----------------------------------------------------")
-        print(self.employe_id)
+        print("employ -----------------------------------------------------")
+
         return {
             "type": "ir.actions.act_window",
             "res_model": "hr.employee",
             "views": [[False, "form"]],
-            "res_id": 20,
+            "res_id": self.employe_id.id,
             "target": "new",
         }
 

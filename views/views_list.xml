@@ -14,6 +14,7 @@
         <field name="arch" type="xml">
             <tree string="Tests">
                 <field name="manufacturer"/>
+                <field name="id"/>
                 <field name="car_model"/>
                 <field name="fuel_type"/>
                 <field name="numbers_of_places"/>

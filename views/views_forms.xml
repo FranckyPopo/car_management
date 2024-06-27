@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
-                    <button name="%(model_car_action)d" type="action" string="Name BUtton" icon="fa-level-down"/>
+                   <!-- <button name="%(model_car_action)d" type="action" string="Name BUtton" icon="fa-level-down"/>-->
                 </header>
                 <sheet>
                     <group>

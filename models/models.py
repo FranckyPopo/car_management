@@ -72,6 +72,10 @@ class Car(models.Model):
         for order in self:
             order.display_name = f"{order.manufacturer}({order.car_model})".title()
 
+    def action_test(self):
+        print("-----------------------------------------------------")
+        print("Vous venez de cliquer sur le bouton test")
+        return True
 
 class Travel(models.Model):
     _name = "car_management.travel"

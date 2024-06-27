@@ -2,12 +2,14 @@
 
 <odoo>
 
+    <!-- Action Car -->
      <record id="car_action_view_form" model="ir.ui.view">
         <field name="name">Car Tree</field>
         <field name="model">car_management.car</field>
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
+                    <button name="%(model_car_action)d" type="action" string="Name BUtton" icon="fa-level-down"/>
                 </header>
                 <sheet>
                     <group>

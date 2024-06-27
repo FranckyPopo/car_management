@@ -74,8 +74,14 @@ class Car(models.Model):
 
     def action_test(self):
         print("-----------------------------------------------------")
-        print("Vous venez de cliquer sur le bouton test")
-        return True
+        print(self.employe_id)
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "hr.employee",
+            "views": [[False, "form"]],
+            "res_id": 20,
+            "target": "new",
+        }
 
 class Travel(models.Model):
     _name = "car_management.travel"

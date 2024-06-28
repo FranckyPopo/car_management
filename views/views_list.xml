@@ -12,7 +12,7 @@
         <field name="name">Car Tree</field>
         <field name="model">car_management.car</field>
         <field name="arch" type="xml">
-            <tree string="Tests">
+            <tree string="Tests" >
                 <field name="manufacturer"/>
                 <field name="car_model"/>
                 <field name="fuel_type"/>

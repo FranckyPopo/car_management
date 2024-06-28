@@ -34,8 +34,8 @@
         <field name="arch" type="xml">
             <tree string="Tests">
                 <field name="car_id"/>
-                <field name="departure_location"/>
-                <field name="destination"/>
+                <field name="departure_location" widget="badge"/>
+                <field name="destination" widget="badge"/>
                 <field name="travel_time"/>
             </tree>
         </field>
@@ -53,10 +53,10 @@
         <field name="model">car_management.ticket</field>
         <field name="arch" type="xml">
             <tree string="Tests">
-                <field name="contact_id"/>
-                <field name="destionation"/>
+                <field name="contact_id" widget="badge"/>
+                <field name="destionation" widget="badge"/>
                 <field name="car_id"/>
-                <field name="date_departure"/>
+                <field name="date_departure" widget="remaining_days"/>
             </tree>
         </field>
     </record>

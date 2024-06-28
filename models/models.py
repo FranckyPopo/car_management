@@ -93,7 +93,7 @@ class Travel(models.Model):
         "car_management.car",
         string="Voiture",
     )
-    departure_location = fields.Char(string="Lieu départ")
+    departure_location = fields.Char(string="Lieu de départ")
     destination = fields.Char(string="Destination")
     date_departure = fields.Datetime(string="Date de départ", default=fields.Datetime.now())
     date_arrival = fields.Datetime(string="Date d'arrivée", default=fields.Datetime.now())

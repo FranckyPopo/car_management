@@ -54,6 +54,7 @@
                             <field name="travel_time"
                                    help="Le Nombre saisi sera multiplié par. Le temps d'arrivée s'exprime en jour"
                                    placeholder="e.g. 2"
+                                   widget="remaining_days"
                             />
                         </group>
                         <group>

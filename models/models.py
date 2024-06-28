@@ -65,7 +65,8 @@ class Car(models.Model):
     employe_id = fields.Many2one(
         "hr.employee",
         required=True,
-        string="Chauffeur"
+        string="Chauffeur",
+        readonly=True,
     )
 
     def _compute_display_name(self):

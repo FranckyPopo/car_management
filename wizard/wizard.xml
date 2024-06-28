@@ -15,7 +15,7 @@
                         <button type="object"
                                 name="valid"
                                 string="Comfirmer"
-                                class="btn-primary"
+                                class="btn-success"
                         />
                         <button string="Annuler"
                                 special="cancel"

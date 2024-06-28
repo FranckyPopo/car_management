@@ -13,6 +13,7 @@
                            type="object"
                            string="Détail chauffeur"
                            icon="fa-id-card"
+                           class="btn-info"
                    />
                    <button string="Changer chauffeur" type="action"
                            name="%(franck)d"

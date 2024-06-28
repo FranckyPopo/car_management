@@ -9,10 +9,16 @@
         <field name="arch" type="xml">
             <form string="Test Form Car">
                 <header>
-                   <button name="driver_details" type="object" string="Détail chauffeur"/>
+                   <button name="driver_details"
+                           type="object"
+                           string="Détail chauffeur"
+                           icon="fa-id-card"
+                   />
                    <button string="Changer chauffeur" type="action"
                            name="%(franck)d"
-                           context="{'employee_id':active_id}"/>
+                           context="{'employee_id':active_id}"
+                           icon="fa-pencil-square"
+                   />
                 </header>
                 <sheet>
                     <group>

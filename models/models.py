@@ -66,7 +66,6 @@ class Car(models.Model):
         "hr.employee",
         required=True,
         string="Chauffeur",
-        readonly=True,
     )
 
     def _compute_display_name(self):

@@ -12,8 +12,15 @@
                         <field name="employe_id"/>
                     </group>
                     <footer>
-                        <button type="object" name="valid" string="Comfirmer le changement de chauffeur"></button>
-                        <button string="Annuler" speciale="cancel"></button>
+                        <button type="object"
+                                name="valid"
+                                string="Comfirmer"
+                                class="btn-primary"
+                        />
+                        <button string="Annuler"
+                                special="cancel"
+                                class="btn-danger"
+                        />
                      </footer>
                 </sheet>
             </form>

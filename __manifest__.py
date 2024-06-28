@@ -26,15 +26,15 @@
         'security/ir.model.access.csv',
 
         'views/views_list.xml',
-        'views/views_forms.xml',
         'views/views_menu.xml',
         'views/views_kanban.xml',
         'wizard/wizard.xml',
+        'views/views_forms.xml',
 
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        #'demo/demo.xml',
     ],
 }
 

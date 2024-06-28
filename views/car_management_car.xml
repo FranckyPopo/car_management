@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <!-- List -->
+    <record id="model_car_action" model="ir.actions.act_window">
+        <field name="name">Liste des voitures</field>
+        <field name="res_model">car_management.car</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="car_action_view_tree" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.car</field>
+        <field name="arch" type="xml">
+            <tree string="Tests" >
+                <field name="manufacturer"/>
+                <field name="car_model"/>
+                <field name="fuel_type"/>
+                <field name="numbers_of_places"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+     <record id="car_action_view_form" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.car</field>
+        <field name="arch" type="xml">
+            <form string="Test Form Car">
+                <header>
+                   <button name="driver_details"
+                           type="object"
+                           string="Détail chauffeur"
+                           icon="fa-id-card"
+                           class="btn-info"
+                   />
+                   <button string="Changer chauffeur" type="action"
+                           name="%(franck)d"
+                           context="{'employee_id':active_id}"
+                           icon="fa-pencil-square"
+                   />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="manufacturer" placeholder="e.g. Toyota"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="car_model" placeholder="e.g. Corolla"/>
+                            <field name="numbers_of_places" placeholder="e.g. 2"/>
+                            <field name="employe_id" placeholder="e.g. Kreto Ariel"/>
+                        </group>
+                        <group>
+                            <field name="fuel_type" placeholder="e.g. Essence" widget="radio"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban -->
+    <record id="car_action_view_kanban" model="ir.ui.view">
+        <field name="name">Car Kanban</field>
+        <field name="model">car_management.car</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="manufacturer" quick_create="True" quick_create_view="car_model">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click mb-2" >
+                            <h3>
+                                <span>Modèle : </span>
+                                <field name="car_model"/>
+                            </h3>
+                            <div>
+                                <span>Fabriquant: </span>
+                                <field name="manufacturer"/>
+                            </div>
+                            <div style="">
+                                <span>Conducteur: </span>
+                                <field name="employe_id"/>
+                            </div>
+                            <div style="">
+                                <span>Type de carburant: </span>
+                                <field name="fuel_type"/>
+                            </div>
+
+
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+    </record>
+
+</odoo>

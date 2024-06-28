@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <!-- Kanban -->
+    <record id="ticket_action_view_kanban" model="ir.ui.view">
+        <field name="name">Ticket Kanban</field>
+        <field name="model">car_management.ticket</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click mb-2" >
+                            <h3>
+                                <span>Nom du client : </span>
+                                <field name="contact_id"/>
+                            </h3>
+                            <div>
+                                <span>Voiture: </span>
+                                <field name="car_id"/>
+                            </div>
+                            <div style="">
+                                <span>Destination: </span>
+                                <field name="destionation"/>
+                            </div>
+                            <div style="">
+                                <span>Date de départ: </span>
+                                <field name="date_departure"/>
+                            </div>
+                            <div style="">
+                                <span>Prix du ticket: </span>
+                                <field name="amount"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="ticket_action_view_form" model="ir.ui.view">
+        <field name="name">Travel Form</field>
+        <field name="model">car_management.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Test Form Car">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="contact_id" placeholder="e.g. Afri Kreto"/>
+                            <field name="car_id" placeholder="Mercedes-Benz GLE"/>
+                            <field name="destionation" placeholder="Abidjan"/>
+                        </group>
+                        <group>
+                            <field name="amount" placeholder="e.g. 15500.00 FCFA"/>
+                            <field name="date"/>
+                            <field name="date_departure"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List -->
+    <record id="model_ticket_action" model="ir.actions.act_window">
+        <field name="name">Liste des tickets</field>
+        <field name="res_model">car_management.ticket</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="ticket_action_view_tree" model="ir.ui.view">
+        <field name="name">Car Tree</field>
+        <field name="model">car_management.ticket</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="contact_id" widget="badge"/>
+                <field name="destionation" widget="badge"/>
+                <field name="car_id"/>
+                <field name="date_departure" widget="remaining_days"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

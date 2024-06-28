@@ -25,11 +25,12 @@
     'data': [
         'security/ir.model.access.csv',
 
-        'views/views_list.xml',
-        'views/views_menu.xml',
-        'views/views_kanban.xml',
-        'wizard/wizard.xml',
-        'views/views_forms.xml',
+        'wizard/car_management_car_wizard.xml',
+
+        'views/car_management_menu.xml',
+        'views/car_management_travel.xml',
+        'views/car_management_ticket.xml',
+        'views/car_management_car.xml',
 
     ],
     # only loaded in demonstration mode

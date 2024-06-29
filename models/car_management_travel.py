@@ -13,7 +13,7 @@ class Travel(models.Model):
     destination = fields.Char(string="Destination")
     date_departure = fields.Datetime(string="Date de départ", default=fields.Datetime.now())
     date_arrival = fields.Datetime(string="Date d'arrivée", default=fields.Datetime.now())
-    travel_time = fields.Datetime(string="Durée du voyage")
+    travel_time = fields.Char(string="Durée du voyage", readonly=True)
     numbers_of_places = fields.Integer(
         string="Nombres de places",
         readonly=True,

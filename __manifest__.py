@@ -27,10 +27,10 @@
 
         'wizard/car_management_car_wizard.xml',
 
-        'views/car_management_menu.xml',
         'views/car_management_travel.xml',
         'views/car_management_ticket.xml',
         'views/car_management_car.xml',
+        'views/car_management_menu.xml',
 
     ],
     # only loaded in demonstration mode

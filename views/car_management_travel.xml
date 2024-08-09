@@ -91,6 +91,8 @@
                 <field name="departure_location" widget="badge"/>
                 <field name="destination" widget="badge"/>
                 <field name="travel_time"/>
+                <field name="date_departure" optional="hide"/>
+                <field name="date_arrival" optional="hide"/>
             </tree>
         </field>
     </record>

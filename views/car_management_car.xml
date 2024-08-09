@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <odoo>
-
+  
     <!-- List -->
     <record id="model_car_action" model="ir.actions.act_window">
         <field name="name">Liste des voitures</field>
@@ -13,7 +13,7 @@
         <field name="name">Car Tree</field>
         <field name="model">car_management.car</field>
         <field name="arch" type="xml">
-            <tree string="Tests" >
+            <tree string="Tests" default_group_by="employe_id">
                 <field name="manufacturer"/>
                 <field name="car_model"/>
                 <field name="fuel_type"/>
@@ -40,7 +40,9 @@
                            context="{'employee_id':active_id}"
                            icon="fa-pencil-square"
                    />
+                   
                 </header>
+                
                 <sheet>
                     <group>
                         <field name="manufacturer" placeholder="e.g. Toyota"/>

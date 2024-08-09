@@ -79,3 +79,5 @@ class Car(models.Model):
             "res_id": self.employe_id.id,
             "target": "new",
         }
+
+

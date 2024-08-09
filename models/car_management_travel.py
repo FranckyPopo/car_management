@@ -83,4 +83,13 @@ class Travel(models.Model):
 
     def _compute_display_name(self):
         for order in self:
-            order.display_name = f"{order.car_id.car_model}"
+            order.display_name = f"Voyage - {order.car_id.car_model}"
+
+    def action_get_vehicle_record(self):
+
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "car_management.car",
+            "views": [[False, "form"]],
+            "res_id": self.car_id.id,
+        }
